@@ -1,0 +1,3 @@
+rootProject.name = 'FriskyCubeProject'
+
+include ':app'
