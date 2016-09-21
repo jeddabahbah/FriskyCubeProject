@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { StyleSheet,Text,View } from 'react-native';
+import { StyleSheet,Text,View,Image } from 'react-native';
+
+
 
 class SplashScreen extends Component {
 
@@ -32,14 +34,15 @@ class SplashScreen extends Component {
               :
               //display splashscreen
               (<View style={[styles.container,this.props.backgroundColor]}>
-                  <Text>
-                    I'm SplashScreen.
-                  </Text>
+                  <Image
+                    source={require('./../../assets/lunch.png')}
+                  />
               </View>)
     );
   }
 
 }
+
 
 const styles = StyleSheet.create({
     container: {
@@ -47,7 +50,11 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+        width:null,
+        height:null,
   },
+    
+
 });
 
 export default SplashScreen;

@@ -31,6 +31,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
+
   },
   welcome: {
     fontSize: 20,
@@ -43,7 +44,8 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   splashScreenContainer:{
-    backgroundColor:'blue'
+    backgroundColor:'#BBDEFB',
+    
   },
 
 });
