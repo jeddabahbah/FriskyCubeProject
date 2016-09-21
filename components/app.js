@@ -5,9 +5,12 @@ import {
   View
 } from 'react-native';
 
+import SplashScreen from './splashScreen/splashScreen'
+
 class App extends Component {
   render() {
     return (
+      <SplashScreen>
       <View style={styles.container}>
         <Text style={styles.welcome}>
           Welcome to React Native!
@@ -15,8 +18,8 @@ class App extends Component {
         <Text style={styles.instructions}>
           This file open from App.js
         </Text>
-        
       </View>
+      </SplashScreen>
     );
   }
 }
