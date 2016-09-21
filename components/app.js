@@ -10,7 +10,7 @@ import SplashScreen from './splashScreen/splashScreen'
 class App extends Component {
   render() {
     return (
-      <SplashScreen>
+      <SplashScreen duration={3000} backgroundColor={styles.splashScreenContainer}>
       <View style={styles.container}>
         <Text style={styles.welcome}>
           Welcome to React Native!
@@ -22,6 +22,7 @@ class App extends Component {
       </SplashScreen>
     );
   }
+
 }
 
 const styles = StyleSheet.create({
@@ -41,6 +42,10 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+  splashScreenContainer:{
+    backgroundColor:'blue'
+  },
+
 });
 
 export default App;
