@@ -6,18 +6,14 @@ import {
 } from 'react-native';
 
 import SplashScreen from './splashScreen/splashScreen'
+import MainMenuScreen from './mainMenuScreen/mainMenuScreen'
 
 class App extends Component {
   render() {
     return (
       <SplashScreen duration={3000} backgroundColor={styles.splashScreenContainer}>
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          This file open from App.js
-        </Text>
+      <View>
+          <MainMenuScreen></MainMenuScreen>
       </View>
       </SplashScreen>
     );
