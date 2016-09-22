@@ -11,7 +11,7 @@ class MainMenuScreen extends Component {
   render() {
     return (
       //<Image source={require('./../../assets/bg2.png')}>
-      <View style={styles.container}>
+      /*<View style={styles.container}>
       <Image source={require('./../../assets/bg2.png')}>
         <Text style={styles.welcome}>
           Welcome to FriskyCube
@@ -20,9 +20,32 @@ class MainMenuScreen extends Component {
           This file open from MainMenuScreen.
         </Text>
         </Image>
-      </View>
+      </View>*/
       //</Image>
-      
+      <View style={styles.container}>
+      <Image source={require('./../../assets/bg2.png')}>
+        <Text style={styles.welcome}>
+          Welcome to FriskyCube
+        </Text>
+
+        <View style={{flexDirection: 'row', height: 100,padding:5}}>
+          <View style={{backgroundColor: 'red',flex: 0.3}}><Text>Picture</Text></View>
+          <View style={{backgroundColor: 'green',flex: 0.5}}><Text>Detail</Text></View>
+        </View>
+
+        <View style={{flexDirection: 'row', height: 100,padding:5}}>
+          <View style={{backgroundColor: 'red',flex: 0.3}}><Text>Picture</Text></View>
+          <View style={{backgroundColor: 'green',flex: 0.5}}><Text>Detail</Text></View>
+        </View>
+
+        <View style={{flexDirection: 'row', height: 100,padding:5}}>
+          <View style={{backgroundColor: 'red',flex: 0.3}}><Text>Picture</Text></View>
+          <View style={{backgroundColor: 'green',flex: 0.5}}><Text>Detail</Text></View>
+        </View>
+    
+        </Image>
+      </View>
+
     );
   }
 
@@ -30,6 +53,7 @@ class MainMenuScreen extends Component {
 
 const styles = StyleSheet.create({
   container: {
+    flexDirection: 'column',
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
@@ -39,6 +63,7 @@ const styles = StyleSheet.create({
 
   },
   welcome: {
+    flexDirection: 'row',
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
