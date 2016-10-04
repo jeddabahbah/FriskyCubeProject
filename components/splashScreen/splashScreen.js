@@ -3,6 +3,7 @@ import { StyleSheet,Text,View,Image } from 'react-native';
 
 
 
+
 class SplashScreen extends Component {
 
   constructor(props){
@@ -33,11 +34,10 @@ class SplashScreen extends Component {
               ({...this.props.children})
               :
               //display splashscreen
-              (<View style={[styles.container,this.props.backgroundColor]}>
-                  <Image
-                    source={require('./../../assets/lunch.png')}
-                  />
-              </View>)
+              (
+                  <Image source={require('./../../assets/lunch.png')} style={styles.container}>
+                  </Image>
+              )
     );
   }
 
@@ -46,12 +46,12 @@ class SplashScreen extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        flexDirection:'column',
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
         width:null,
         height:null,
+      
   },
     
 

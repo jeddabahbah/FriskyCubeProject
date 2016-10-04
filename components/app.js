@@ -11,10 +11,10 @@ import MainMenuScreen from './mainMenuScreen/mainMenuScreen'
 class App extends Component {
   render() {
     return (
-      <SplashScreen duration={3000} backgroundColor={styles.splashScreenContainer}>
-      <View>
-          <MainMenuScreen></MainMenuScreen>
-      </View>
+      <SplashScreen duration={3000}>
+          <MainMenuScreen>
+            
+          </MainMenuScreen>
       </SplashScreen>
     );
   }
@@ -39,10 +39,7 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
-  splashScreenContainer:{
-    //backgroundColor:'#BBDEFB',
-    
-  },
+  
 
 });
 
