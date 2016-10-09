@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Content, List, ListItem, Thumbnail, Text } from 'native-base';
+import { Container, Content, List, ListItem, Thumbnail, Text, Header, Title } from 'native-base';
 import { StyleSheet, Image } from 'react-native';
 
 class MainMenuScreen extends Component {
@@ -15,6 +15,10 @@ class MainMenuScreen extends Component {
             
         <Image source={require('./../../assets/bg2.png')} style={styles.container}>
            <Container>
+            <Header>    
+                    <Title>FriskyCube Project</Title>
+            </Header>
+
                 <Content>
                     <List>
                         <ListItem onPress={this.navigate.bind(this,'firstItem')} >

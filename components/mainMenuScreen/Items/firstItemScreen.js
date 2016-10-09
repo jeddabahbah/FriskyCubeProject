@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Content, List, ListItem, Thumbnail, Text } from 'native-base';
+import { Container, Content, List, ListItem, Thumbnail, Text, Header, Title } from 'native-base';
 import { StyleSheet, Image, View } from 'react-native';
 
 class FirstItem extends Component {
@@ -7,9 +7,18 @@ class FirstItem extends Component {
   render() {
     return (
         <Image source={require('./../../../assets/bg2.png')} style={styles.container}>
-           <View>
+
+        <Container>
+            <Header>    
+                <Title>First</Title>
+            </Header>
+
+            <View>
                 <Text style={styles.welcome}>This is first item!!!</Text>
-           </View>
+            </View>   
+        </Container>
+
+          
         </Image>
     );
   }
