@@ -1,16 +1,36 @@
 import React, { Component } from 'react';
-import { StyleSheet,Text,View } from 'react-native';
+import { StyleSheet, Text, View, Navigator } from 'react-native';
 
-import SplashScreen from './splashScreen/splashScreen'
-import MainMenuScreen from './mainMenuScreen/mainMenuScreen'
+import SplashScreen from './splashScreen/splashScreen';
+import MainMenuScreen from './mainMenuScreen/mainMenuScreen';
+import FirstItem from './mainMenuScreen/Items/firstItemScreen';
+import SecondItem from './mainMenuScreen/Items/secondItemScreen';
+
 
 class App extends Component {
+
+  renderScene(route, navigator){
+
+    if(route.name == 'main'){
+      return <MainMenuScreen navigator={navigator} />
+    }
+
+    if(route.name == 'firstItem'){
+      return <FirstItem navigator={navigator} />
+    }
+
+    if(route.name == 'secondItem'){
+      return <SecondItem navigator={navigator} />
+    }
+  }
+
   render() {
     return (
       <SplashScreen duration={3000}>
-          <MainMenuScreen>
-            
-          </MainMenuScreen>
+          <Navigator
+            initialRoute={{name: 'main'}}
+            renderScene={this.renderScene.bind(this)}
+          />
       </SplashScreen>
     );
   }

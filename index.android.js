@@ -12,14 +12,18 @@ import {
   Text,
   View
 } from 'react-native';
-import App from './components/app'
+
+import App from './components/app';
 
 class FriskyCubeProject extends Component {
+
+	
+
   render() {
     return (
 
       <App/>
-
+      
     );
   }
 }
