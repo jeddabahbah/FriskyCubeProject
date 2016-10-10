@@ -15,10 +15,10 @@ class MainMenuScreen extends Component {
             
         <Image source={require('./../../assets/bg2.png')} style={styles.container}>
            <Container>
+
             <Header>    
                     <Title>FriskyCube Project</Title>
             </Header>
-
                 <Content>
                     <List>
                         <ListItem onPress={this.navigate.bind(this,'firstItem')} >
@@ -33,7 +33,13 @@ class MainMenuScreen extends Component {
                             <Text>Infiniti</Text>
                             <Text note>1989</Text>
                         </ListItem>
-                    </List>
+
+                        <ListItem onPress={this.navigate.bind(this,'testItem')}>
+                            <Thumbnail square size={80} source={require('./../../assets/infiniti-logo.png')} />
+                            <Text>Test Blur Screen</Text>
+                            <Text note>test test test test test</Text>
+                        </ListItem>
+                    </List> 
                 </Content>
             </Container>
         </Image>
@@ -51,9 +57,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         width:null,
         height:null,
+        opacity:0.8,
     },
-
-    
 
 });
     

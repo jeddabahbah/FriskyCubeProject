@@ -7,6 +7,7 @@ import FirstItem from './mainMenuScreen/Items/firstItemScreen';
 import SecondItem from './mainMenuScreen/Items/secondItemScreen';
 
 
+
 class App extends Component {
 
   renderScene(route, navigator){
@@ -22,6 +23,8 @@ class App extends Component {
     if(route.name == 'secondItem'){
       return <SecondItem navigator={navigator} />
     }
+
+   
   }
 
   render() {
