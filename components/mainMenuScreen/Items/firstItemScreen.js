@@ -6,7 +6,7 @@ class FirstItem extends Component {
 
   render() {
     return (
-        <Image source={require('./../../../assets/bg2.png')} style={styles.container}>
+        <Image source={require('./../../../assets/bgblur.png')} style={styles.container}>
 
         <Container>
             <Header>    

@@ -30,64 +30,46 @@ class MainMenuScreen extends Component {
                 <Content>
                     <List>
                         <ListItem onPress={this.navigate.bind(this,'firstItem')} >
-                            <Thumbnail square size={90} source={require('./../../assets/infiniti-logo.png')} />
+                            <Thumbnail style={styles.starImage} square size={90} source={require('./../../assets/star_aries.png')} />
                             <Text>Infiniti</Text>
-                            <Text note>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Text>
+                            <Text note>Detail</Text>
                         </ListItem>
                         
                         <ListItem onPress={this.navigate.bind(this,'secondItem')}>
-                            <Thumbnail square size={90} source={require('./../../assets/infiniti-logo.png')} />
+                            <Thumbnail square size={90} source={require('./../../assets/star_cancer.png')} />
                             <Text>Infiniti</Text>
                             <Text note>1989</Text>
                         </ListItem>
 
                         <ListItem onPress={this.navigate.bind(this,'testItem')}>
-                            <Thumbnail square size={90} source={require('./../../assets/infiniti-logo.png')} />
+                            <Thumbnail square size={90} source={require('./../../assets/star_capricorn.png')} />
                             <Text>Test Blur Screen</Text>
                             <Text note>test test test test test</Text>
                         </ListItem>
 
                         <ListItem onPress={this.navigate.bind(this,'testItem')}>
-                            <Thumbnail square size={90} source={require('./../../assets/infiniti-logo.png')} />
+                            <Thumbnail square size={90} source={require('./../../assets/star_leo.png')} />
                             <Text>Test Blur Screen</Text>
                             <Text note>test test test test test</Text>
                         </ListItem>
 
                         <ListItem onPress={this.navigate.bind(this,'testItem')}>
-                            <Thumbnail square size={90} source={require('./../../assets/infiniti-logo.png')} />
+                            <Thumbnail square size={90} source={require('./../../assets/star_libra.png')} />
                             <Text>Test Blur Screen</Text>
                             <Text note>test test test test test</Text>
                         </ListItem>
 
                         <ListItem onPress={this.navigate.bind(this,'testItem')}>
-                            <Thumbnail square size={90} source={require('./../../assets/infiniti-logo.png')} />
+                            <Thumbnail square size={90} source={require('./../../assets/star_taurus.png')} />
                             <Text>Test Blur Screen</Text>
                             <Text note>test test test test test</Text>
                         </ListItem>
 
 
-                         <ListItem onPress={this.navigate.bind(this,'testItem')}>
-                            <Thumbnail square size={90} source={require('./../../assets/infiniti-logo.png')} />
-                            <Text>Test Blur Screen</Text>
-                            <Text note>test test test test test</Text>
-                        </ListItem>
-                         <ListItem onPress={this.navigate.bind(this,'testItem')}>
-                            <Thumbnail square size={90} source={require('./../../assets/infiniti-logo.png')} />
-                            <Text>Test Blur Screen</Text>
-                            <Text note>test test test test test</Text>
-                        </ListItem>
-                         <ListItem onPress={this.navigate.bind(this,'testItem')}>
-                            <Thumbnail square size={90} source={require('./../../assets/infiniti-logo.png')} />
-                            <Text>Test Blur Screen</Text>
-                            <Text note>test test test test test</Text>
-                        </ListItem>
-                         <ListItem onPress={this.navigate.bind(this,'testItem')}>
-                            <Thumbnail square size={90} source={require('./../../assets/infiniti-logo.png')} />
-                            <Text>Test Blur Screen</Text>
-                            <Text note>test test test test test</Text>
-                        </ListItem>
                     </List> 
                 </Content>
+
+
             </Container>
         </Image>
 
@@ -111,7 +93,9 @@ const styles = StyleSheet.create({
     },
     buttonHowto:{
         backgroundColor:'#090123',
-        padding:10,
+    },
+    starImage:{
+        borderColor:'white',
     },
 
 });
