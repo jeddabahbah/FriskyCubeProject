@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Content, List, ListItem, Thumbnail, Text, Header, Title } from 'native-base';
 import { StyleSheet, Image, View } from 'react-native';
+import { Col, Row, Grid } from "react-native-easy-grid";
 
 class FirstItem extends Component {
 
@@ -13,9 +14,13 @@ class FirstItem extends Component {
                 <Title>First</Title>
             </Header>
 
-            <View>
-                <Text style={styles.welcome}>This is first item!!!</Text>
-            </View>   
+                 <Content>
+                    <Grid>
+                        <Col style={{ backgroundColor: '#D954D7', height: 200 }}></Col>
+                        <Col style={{ backgroundColor: '#D93735', height: 200  }}></Col>
+                    </Grid>
+                </Content>
+            
         </Container>
 
           

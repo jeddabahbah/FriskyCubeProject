@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Container, Content, List, ListItem, Thumbnail, Text, Header, Title, Button, Icon } from 'native-base';
 import { StyleSheet, Image, View } from 'react-native';
 
+
 class MainMenuScreen extends Component {
 
     navigate(routeName){
