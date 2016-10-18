@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Content, List, ListItem, Thumbnail, Text, Header, Title, Button, Icon } from 'native-base';
 import { StyleSheet, Image, View } from 'react-native';
+import { Col, Row, Grid } from 'react-native-easy-grid';
 
 
 class MainMenuScreen extends Component {
@@ -29,6 +30,14 @@ class MainMenuScreen extends Component {
             
             </Header>
                 <Content>
+
+                    <Grid>
+                        <Row style={styles.item}>
+                        <Col></Col>
+                        </Row>
+                    </Grid>
+
+
                     <List>
                         <ListItem onPress={this.navigate.bind(this,'firstItem')} >
                             <Thumbnail style={styles.starImage} square size={90} source={require('./../../assets/star_aries.png')} />
@@ -44,24 +53,6 @@ class MainMenuScreen extends Component {
 
                         <ListItem onPress={this.navigate.bind(this,'testItem')}>
                             <Thumbnail square size={90} source={require('./../../assets/star_capricorn.png')} />
-                            <Text>Test Blur Screen</Text>
-                            <Text note>test test test test test</Text>
-                        </ListItem>
-
-                        <ListItem onPress={this.navigate.bind(this,'testItem')}>
-                            <Thumbnail square size={90} source={require('./../../assets/star_leo.png')} />
-                            <Text>Test Blur Screen</Text>
-                            <Text note>test test test test test</Text>
-                        </ListItem>
-
-                        <ListItem onPress={this.navigate.bind(this,'testItem')}>
-                            <Thumbnail square size={90} source={require('./../../assets/star_libra.png')} />
-                            <Text>Test Blur Screen</Text>
-                            <Text note>test test test test test</Text>
-                        </ListItem>
-
-                        <ListItem onPress={this.navigate.bind(this,'testItem')}>
-                            <Thumbnail square size={90} source={require('./../../assets/star_taurus.png')} />
                             <Text>Test Blur Screen</Text>
                             <Text note>test test test test test</Text>
                         </ListItem>
@@ -97,6 +88,13 @@ const styles = StyleSheet.create({
     },
     starImage:{
         borderColor:'white',
+    },
+    item:{
+        backgroundColor: '#f2f2f2',
+        height: 200,
+        zIndex: 1,
+        margin: 10,
+        opacity: 0.2,
     },
 
 });
