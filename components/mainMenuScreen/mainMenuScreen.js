@@ -33,7 +33,10 @@ class MainMenuScreen extends Component {
 
                     <Grid>
                         <Row style={styles.item}>
-                        <Col></Col>
+                            <Col>
+                                <View><Text style={styles.detailStar}>กลุ่มดาวแกะ</Text></View>
+                                <Image source={require('./../../assets/star_aries.png')} style={styles.picStar}></Image>                                
+                            </Col>
                         </Row>
                     </Grid>
 
@@ -95,6 +98,17 @@ const styles = StyleSheet.create({
         zIndex: 1,
         margin: 10,
         opacity: 0.2,
+    },
+    picStar:{
+        zIndex:2,
+        width:150,
+        height:200,
+        opacity: 0.6,
+    },
+    detailStar:{
+        zIndex:3,
+        color:'white',
+        justifyContent: 'flex-end',
     },
 
 });
