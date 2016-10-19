@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Content, List, ListItem, Thumbnail, Text, Header, Title, Button, Icon } from 'native-base';
-import { StyleSheet, Image, View } from 'react-native';
+import { StyleSheet, Image, View, TouchableHighlight } from 'react-native';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 
 
@@ -19,56 +19,96 @@ class MainMenuScreen extends Component {
            <Container>
             <Header style={styles.headernavbar}>  
                 <Button transparent>
-                <Thumbnail style={styles.buttonHowto} size={30} source={require('./../../assets/icon_howto.png')} />
+                <Thumbnail style={styles.buttonIcon} size={30} source={require('./../../assets/icon_howto.png')} />
                 </Button>
                     <Title>กลุ่มดาว</Title>
 
                 <Button transparent>
-                <Thumbnail style={styles.buttonHowto} size={30} source={require('./../../assets/icon_bt.png')} />
+                <Thumbnail style={styles.buttonIcon} size={30} source={require('./../../assets/icon_bt.png')} />
                 </Button>
 
             
             </Header>
-                <Content>
 
+                <Content>
                     <Grid>
                         <Row style={styles.item}>
-                            <Col>
-                                <View><Text style={styles.detailStar}>กลุ่มดาวแกะ</Text></View>
-                                <Image source={require('./../../assets/star_aries.png')} style={styles.picStar}></Image>                                
-                            </Col>
+                                <Col>
+                                     <View style={styles.detailStar} >
+                                        <Text onPress={this.navigate.bind(this,'firstItem')} 
+                                              style={{color:'white'}}> กลุ่มดาวแกะ </Text>
+                                     </View> 
+                                     <View>
+                                          <TouchableHighlight onPress={this.navigate.bind(this,'firstItem')}>
+                                            <Image style={styles.picStar} source={require('./../../assets/star_aries.png')} />
+                                          </TouchableHighlight> 
+                                     </View>
+                                </Col>
                         </Row>
+
+                        <Row style={styles.item}>
+                                <Col>
+                                     <View style={styles.detailStar} >
+                                        <Text onPress={this.navigate.bind(this,'firstItem')} 
+                                              style={{color:'white'}}> กลุ่มดาวแกะ </Text>
+                                     </View> 
+                                     <View>
+                                          <TouchableHighlight onPress={this.navigate.bind(this,'firstItem')}>
+                                            <Image style={styles.picStar} source={require('./../../assets/star_aries.png')} />
+                                          </TouchableHighlight> 
+                                     </View>
+                                </Col>
+                        </Row>
+
+                        <Row style={styles.item}>
+                                <Col>
+                                     <View style={styles.detailStar} >
+                                        <Text onPress={this.navigate.bind(this,'firstItem')} 
+                                              style={{color:'white'}}> กลุ่มดาวแกะ </Text>
+                                     </View> 
+                                     <View>
+                                          <TouchableHighlight onPress={this.navigate.bind(this,'firstItem')}>
+                                            <Image style={styles.picStar} source={require('./../../assets/star_aries.png')} />
+                                          </TouchableHighlight> 
+                                     </View>
+                                </Col>
+                        </Row>
+
+                        <Row style={styles.item}>
+                                <Col>
+                                     <View style={styles.detailStar} >
+                                        <Text onPress={this.navigate.bind(this,'firstItem')} 
+                                              style={{color:'white'}}> กลุ่มดาวแกะ </Text>
+                                     </View> 
+                                     <View>
+                                          <TouchableHighlight onPress={this.navigate.bind(this,'firstItem')}>
+                                            <Image style={styles.picStar} source={require('./../../assets/star_aries.png')} />
+                                          </TouchableHighlight> 
+                                     </View>
+                                </Col>
+                        </Row>
+
+
+                        <Row style={styles.item}>
+                                <Col>
+                                     <View style={styles.detailStar} >
+                                        <Text onPress={this.navigate.bind(this,'firstItem')} 
+                                              style={{color:'white'}}> กลุ่มดาวแกะ </Text>
+                                     </View> 
+                                     <View>
+                                          <TouchableHighlight onPress={this.navigate.bind(this,'firstItem')}>
+                                            <Image style={styles.picStar} source={require('./../../assets/star_aries.png')} />
+                                          </TouchableHighlight> 
+                                     </View>
+                                </Col>
+                        </Row>
+
+
+
                     </Grid>
-
-
-                    <List>
-                        <ListItem onPress={this.navigate.bind(this,'firstItem')} >
-                            <Thumbnail style={styles.starImage} square size={90} source={require('./../../assets/star_aries.png')} />
-                            <Text>Infiniti</Text>
-                            <Text note>Detail</Text>
-                        </ListItem>
-                        
-                        <ListItem onPress={this.navigate.bind(this,'secondItem')}>
-                            <Thumbnail square size={90} source={require('./../../assets/star_cancer.png')} />
-                            <Text>Infiniti</Text>
-                            <Text note>1989</Text>
-                        </ListItem>
-
-                        <ListItem onPress={this.navigate.bind(this,'testItem')}>
-                            <Thumbnail square size={90} source={require('./../../assets/star_capricorn.png')} />
-                            <Text>Test Blur Screen</Text>
-                            <Text note>test test test test test</Text>
-                        </ListItem>
-
-
-                    </List> 
                 </Content>
-
-
             </Container>
         </Image>
-
-
 
     );
   }
@@ -86,7 +126,7 @@ const styles = StyleSheet.create({
     headernavbar: {
         backgroundColor:'#090123',
     },
-    buttonHowto:{
+    buttonIcon:{
         backgroundColor:'#090123',
     },
     starImage:{
@@ -95,20 +135,26 @@ const styles = StyleSheet.create({
     item:{
         backgroundColor: '#f2f2f2',
         height: 200,
-        zIndex: 1,
+        zIndex: 500,
         margin: 10,
-        opacity: 0.2,
+        opacity: 0.1,
     },
     picStar:{
-        zIndex:2,
-        width:150,
-        height:200,
-        opacity: 0.6,
+        zIndex:20,
+        justifyContent: 'flex-start',
+        alignItems: 'flex-start',
+        top:0,
+        width:380,height:180,marginLeft:-20,marginBottom:20,
+      
     },
     detailStar:{
-        zIndex:3,
-        color:'white',
+        zIndex:30,
+        flex: 1,
         justifyContent: 'flex-end',
+        alignItems: 'flex-end',
+        marginRight:30,
+        marginBottom:-50,
+
     },
 
 });
