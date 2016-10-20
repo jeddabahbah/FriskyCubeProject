@@ -49,12 +49,12 @@ class MainMenuScreen extends Component {
                         <Row style={styles.item}>
                                 <Col>
                                      <View style={styles.detailStar} >
-                                        <Text onPress={this.navigate.bind(this,'firstItem')} 
-                                              style={{color:'white'}}> กลุ่มดาวแกะ </Text>
+                                        <Text onPress={this.navigate.bind(this,'secondItem')} 
+                                              style={{color:'white'}}> กลุ่มดาววัว </Text>
                                      </View> 
                                      <View>
-                                          <TouchableHighlight onPress={this.navigate.bind(this,'firstItem')}>
-                                            <Image style={styles.picStar} source={require('./../../assets/star_aries.png')} />
+                                          <TouchableHighlight onPress={this.navigate.bind(this,'secondItem')}>
+                                            <Image style={styles.picStar} source={require('./../../assets/star_taurush.png')} />
                                           </TouchableHighlight> 
                                      </View>
                                 </Col>
@@ -63,12 +63,12 @@ class MainMenuScreen extends Component {
                         <Row style={styles.item}>
                                 <Col>
                                      <View style={styles.detailStar} >
-                                        <Text onPress={this.navigate.bind(this,'firstItem')} 
-                                              style={{color:'white'}}> กลุ่มดาวแกะ </Text>
+                                        <Text onPress={this.navigate.bind(this,'thirdItem')} 
+                                              style={{color:'white'}}> กลุ่มดาวปู </Text>
                                      </View> 
                                      <View>
-                                          <TouchableHighlight onPress={this.navigate.bind(this,'firstItem')}>
-                                            <Image style={styles.picStar} source={require('./../../assets/star_aries.png')} />
+                                          <TouchableHighlight onPress={this.navigate.bind(this,'thirdItem')}>
+                                            <Image style={styles.picStar} source={require('./../../assets/star_cancer.png')} />
                                           </TouchableHighlight> 
                                      </View>
                                 </Col>
@@ -77,12 +77,12 @@ class MainMenuScreen extends Component {
                         <Row style={styles.item}>
                                 <Col>
                                      <View style={styles.detailStar} >
-                                        <Text onPress={this.navigate.bind(this,'firstItem')} 
-                                              style={{color:'white'}}> กลุ่มดาวแกะ </Text>
+                                        <Text onPress={this.navigate.bind(this,'fourthItem')} 
+                                              style={{color:'white'}}> กลุ่มดาวสิงโต </Text>
                                      </View> 
                                      <View>
-                                          <TouchableHighlight onPress={this.navigate.bind(this,'firstItem')}>
-                                            <Image style={styles.picStar} source={require('./../../assets/star_aries.png')} />
+                                          <TouchableHighlight onPress={this.navigate.bind(this,'fourthItem')}>
+                                            <Image style={styles.picStar} source={require('./../../assets/star_leo.png')} />
                                           </TouchableHighlight> 
                                      </View>
                                 </Col>
@@ -92,12 +92,12 @@ class MainMenuScreen extends Component {
                         <Row style={styles.item}>
                                 <Col>
                                      <View style={styles.detailStar} >
-                                        <Text onPress={this.navigate.bind(this,'firstItem')} 
-                                              style={{color:'white'}}> กลุ่มดาวแกะ </Text>
+                                        <Text onPress={this.navigate.bind(this,'fifthItem')} 
+                                              style={{color:'white'}}> กลุ่มดาวแพะ </Text>
                                      </View> 
                                      <View>
-                                          <TouchableHighlight onPress={this.navigate.bind(this,'firstItem')}>
-                                            <Image style={styles.picStar} source={require('./../../assets/star_aries.png')} />
+                                          <TouchableHighlight onPress={this.navigate.bind(this,'fifthItem')}>
+                                            <Image style={styles.picStar} source={require('./../../assets/star_capricorn.png')} />
                                           </TouchableHighlight> 
                                      </View>
                                 </Col>
