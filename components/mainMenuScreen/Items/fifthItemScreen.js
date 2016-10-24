@@ -3,7 +3,7 @@ import { Container, Content, List, ListItem, Thumbnail, Text, Header, Button, Ti
 import { StyleSheet, Image, View } from 'react-native';
 import { Col, Row, Grid } from "react-native-easy-grid";
 
-class SecondItem extends Component {
+class FifthItem extends Component {
 
   render() {
     return (
@@ -16,7 +16,7 @@ class SecondItem extends Component {
                    <Image style={styles.backIcon} source={require('./../../../assets/icon_back.png')} />
             </Button>
 
-                <Title>กลุ่มดาววัว</Title>
+                <Title>กลุ่มดาวแพะ</Title>
             </Header>
 
                  <Content>
@@ -60,4 +60,4 @@ const styles = StyleSheet.create({
 });
     
 
-export default SecondItem;
+export default FifthItem;

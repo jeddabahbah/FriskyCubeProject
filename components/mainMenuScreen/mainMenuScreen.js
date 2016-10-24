@@ -10,7 +10,9 @@ class MainMenuScreen extends Component {
         this.props.navigator.push({
             name: routeName
         })
-    }    
+    }  
+
+      
 
   render() {
     return (

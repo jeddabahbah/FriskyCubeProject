@@ -5,6 +5,9 @@ import SplashScreen from './splashScreen/splashScreen';
 import MainMenuScreen from './mainMenuScreen/mainMenuScreen';
 import FirstItem from './mainMenuScreen/Items/firstItemScreen';
 import SecondItem from './mainMenuScreen/Items/secondItemScreen';
+import ThirdItem from './mainMenuScreen/Items/thirdItemScreen';
+import FourthItem from './mainMenuScreen/Items/fourthItemScreen';
+import FifthItem from './mainMenuScreen/Items/fifthItemScreen';
 
 
 
@@ -23,6 +26,20 @@ class App extends Component {
     if(route.name == 'secondItem'){
       return <SecondItem navigator={navigator} />
     }
+
+    if(route.name == 'thirdItem'){
+      return <ThirdItem navigator={navigator} />
+    }
+
+    if(route.name == 'fourthItem'){
+      return <FourthItem navigator={navigator} />
+    }
+
+    if(route.name == 'fifthItem'){
+      return <FifthItem navigator={navigator} />
+    }
+
+
 
    
   }
