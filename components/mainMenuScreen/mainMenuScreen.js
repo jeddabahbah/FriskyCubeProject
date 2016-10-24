@@ -15,7 +15,7 @@ class MainMenuScreen extends Component {
   render() {
     return (
             
-        <Image source={require('./../../assets/bgblur.png')} style={styles.container}>
+        <Image source={require('./../../assets/bg_star.png')} style={styles.container}>
            <Container>
             <Header style={styles.headernavbar}>  
                 <Button transparent>
@@ -26,8 +26,6 @@ class MainMenuScreen extends Component {
                 <Button transparent>
                 <Thumbnail style={styles.buttonIcon} size={30} source={require('./../../assets/icon_bt.png')} />
                 </Button>
-
-            
             </Header>
 
                 <Content>
@@ -137,7 +135,7 @@ const styles = StyleSheet.create({
         height: 200,
         zIndex: 500,
         margin: 10,
-        opacity: 0.1,
+        opacity: 0.3,
     },
     picStar:{
         zIndex:20,

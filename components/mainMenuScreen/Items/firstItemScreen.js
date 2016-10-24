@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Content, List, ListItem, Thumbnail, Text, Header, Title } from 'native-base';
+import { Container, Content, List, ListItem, Thumbnail, Text, Header, Button, TitleButton, Icon, Title } from 'native-base';
 import { StyleSheet, Image, View } from 'react-native';
 import { Col, Row, Grid } from "react-native-easy-grid";
 
@@ -7,11 +7,16 @@ class FirstItem extends Component {
 
   render() {
     return (
-        <Image source={require('./../../../assets/bgblur.png')} style={styles.container}>
+        <Image source={require('./../../../assets/bg_star.png')} style={styles.container}>
 
         <Container>
-            <Header>    
-                <Title>First</Title>
+            <Header style={styles.headernavbar}>  
+
+            <Button transparent>
+                   <Image style={styles.backIcon} source={require('./../../../assets/icon_back.png')} />
+            </Button>
+
+                <Title>กลุ่มดาวแกะ</Title>
             </Header>
 
                  <Content>
@@ -42,7 +47,15 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     margin: 10,
     color:'white',
-  },
+    },
+    headernavbar: {
+        backgroundColor:'#090123',
+    },
+    backIcon:{
+        width:30,
+        height:30,
+    },
+
 
 });
     
