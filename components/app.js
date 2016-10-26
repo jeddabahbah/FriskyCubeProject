@@ -12,6 +12,7 @@ import SplashScreen from './splashScreen/splashScreen';
 //import FifthItem from './mainMenuScreen/Items/fifthItemScreen';
 import TestNavComponent from './mainMenuScreen/testing/testnav';
 import PageComponent from './mainMenuScreen/testing/page';
+import PageTwoComponent from './mainMenuScreen/testing/pagetwo';
 
 
 var NavigatorBarRouteMapper = {
@@ -39,7 +40,7 @@ var NavigatorBarRouteMapper = {
     if(route.name == 'TestNavComponent'){
       return null
     }
-    
+
     return(
         <Text style={{marginTop:10, color: '#007AFF'}}>
           {route.name}
@@ -60,6 +61,10 @@ class App extends Component {
           case 'PageComponent':
             return(
                 <PageComponent navigator={navigator} route={route} />
+              );
+          case 'PageTwoComponent':
+            return(
+                <PageTwoComponent navigator={navigator} route={route} />
               );
       }
   }

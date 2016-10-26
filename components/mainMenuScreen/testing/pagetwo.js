@@ -1,21 +1,9 @@
  import React, { Component } from 'react';
  import { AppRegistry, StyleSheet, Modal, Image, Platform, View, Text, TouchableHighlight } from 'react-native';
 
- class TestNavComponent extends Component {
+ class PageTwoComponent extends Component {
     onLogin(){
-        this.props.navigator.push({
-            title:'PageComponent',
-            name: 'PageComponent',
-            passProps:{}
-        });
-    }
 
-    onLogin2(){
-        this.props.navigator.push({
-            title:'PageTwoComponent',
-            name: 'PageTwoComponent',
-            passProps:{}
-        });
     }
 
     render() {
@@ -25,10 +13,6 @@
                 <Text style={styles.title}>This is test nav bar</Text>
                 <TouchableHighlight onPress={(this.onLogin.bind(this))} style={styles.button}>
                     <Text style={styles.textButton}>Go!!</Text>
-                </TouchableHighlight>
-
-                <TouchableHighlight onPress={(this.onLogin2.bind(this))} style={styles.button}>
-                    <Text style={styles.textButton}>Go2!!</Text>
                 </TouchableHighlight>
             </View>
          
@@ -62,4 +46,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default TestNavComponent;
+export default PageTwoComponent;
