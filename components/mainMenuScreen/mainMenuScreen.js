@@ -6,17 +6,18 @@ import { Col, Row, Grid } from 'react-native-easy-grid';
 
 class MainMenuScreen extends Component {
 
-    navigate(routeName){
-        this.props.navigator.push({
-            name: routeName
-        })
-    }  
+  goDerper(){
+    
 
-      
+  }
 
   render() {
     return (
-            
+
+
+
+       
+        //this backup
         <Image source={require('./../../assets/bg_star.png')} style={styles.container}>
            <Container>
             <Header style={styles.headernavbar}>  
@@ -35,25 +36,25 @@ class MainMenuScreen extends Component {
                         <Row style={styles.item}>
                                 <Col>
                                      <View style={styles.detailStar} >
-                                        <Text onPress={this.navigate.bind(this,'firstItem')} 
-                                              style={{color:'white'}}> กลุ่มดาวแกะ </Text>
+                                        <Text style={{color:'white'}}> กลุ่มดาวแกะ </Text>
                                      </View> 
                                      <View>
-                                          <TouchableHighlight onPress={this.navigate.bind(this,'firstItem')}>
+                                          <TouchableHighlight >
                                             <Image style={styles.picStar} source={require('./../../assets/star_aries.png')} />
                                           </TouchableHighlight> 
                                      </View>
                                 </Col>
                         </Row>
 
+
                         <Row style={styles.item}>
                                 <Col>
                                      <View style={styles.detailStar} >
-                                        <Text onPress={this.navigate.bind(this,'secondItem')} 
+                                        <Text 
                                               style={{color:'white'}}> กลุ่มดาววัว </Text>
                                      </View> 
                                      <View>
-                                          <TouchableHighlight onPress={this.navigate.bind(this,'secondItem')}>
+                                          <TouchableHighlight >
                                             <Image style={styles.picStar} source={require('./../../assets/star_taurush.png')} />
                                           </TouchableHighlight> 
                                      </View>
@@ -63,11 +64,11 @@ class MainMenuScreen extends Component {
                         <Row style={styles.item}>
                                 <Col>
                                      <View style={styles.detailStar} >
-                                        <Text onPress={this.navigate.bind(this,'thirdItem')} 
+                                        <Text 
                                               style={{color:'white'}}> กลุ่มดาวปู </Text>
                                      </View> 
                                      <View>
-                                          <TouchableHighlight onPress={this.navigate.bind(this,'thirdItem')}>
+                                          <TouchableHighlight>
                                             <Image style={styles.picStar} source={require('./../../assets/star_cancer.png')} />
                                           </TouchableHighlight> 
                                      </View>
@@ -77,11 +78,11 @@ class MainMenuScreen extends Component {
                         <Row style={styles.item}>
                                 <Col>
                                      <View style={styles.detailStar} >
-                                        <Text onPress={this.navigate.bind(this,'fourthItem')} 
+                                        <Text 
                                               style={{color:'white'}}> กลุ่มดาวสิงโต </Text>
                                      </View> 
                                      <View>
-                                          <TouchableHighlight onPress={this.navigate.bind(this,'fourthItem')}>
+                                          <TouchableHighlight>
                                             <Image style={styles.picStar} source={require('./../../assets/star_leo.png')} />
                                           </TouchableHighlight> 
                                      </View>
@@ -92,11 +93,11 @@ class MainMenuScreen extends Component {
                         <Row style={styles.item}>
                                 <Col>
                                      <View style={styles.detailStar} >
-                                        <Text onPress={this.navigate.bind(this,'fifthItem')} 
+                                        <Text 
                                               style={{color:'white'}}> กลุ่มดาวแพะ </Text>
                                      </View> 
                                      <View>
-                                          <TouchableHighlight onPress={this.navigate.bind(this,'fifthItem')}>
+                                          <TouchableHighlight >
                                             <Image style={styles.picStar} source={require('./../../assets/star_capricorn.png')} />
                                           </TouchableHighlight> 
                                      </View>
@@ -117,11 +118,11 @@ class MainMenuScreen extends Component {
 
 const styles = StyleSheet.create({
     container: {   
-        flex: 10,
+        flex: 1,
         justifyContent: 'center',
         width:null,
         height:null,
-        
+       
     },
     headernavbar: {
         backgroundColor:'#090123',
@@ -156,6 +157,7 @@ const styles = StyleSheet.create({
         marginBottom:-50,
 
     },
+
 
 });
     

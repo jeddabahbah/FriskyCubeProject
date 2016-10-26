@@ -1,58 +1,89 @@
+'use strict';
+
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Navigator } from 'react-native';
+import { StyleSheet, Text, View, Navigator, TouchableHighlight } from 'react-native';
 
 import SplashScreen from './splashScreen/splashScreen';
-import MainMenuScreen from './mainMenuScreen/mainMenuScreen';
-import FirstItem from './mainMenuScreen/Items/firstItemScreen';
-import SecondItem from './mainMenuScreen/Items/secondItemScreen';
-import ThirdItem from './mainMenuScreen/Items/thirdItemScreen';
-import FourthItem from './mainMenuScreen/Items/fourthItemScreen';
-import FifthItem from './mainMenuScreen/Items/fifthItemScreen';
+//import TestComponent from './mainMenuScreen/testing/test';
+//import FirstItem from './mainMenuScreen/Items/firstItemScreen';
+//import SecondItem from './mainMenuScreen/Items/secondItemScreen';
+//import ThirdItem from './mainMenuScreen/Items/thirdItemScreen';
+//import FourthItem from './mainMenuScreen/Items/fourthItemScreen';
+//import FifthItem from './mainMenuScreen/Items/fifthItemScreen';
+import TestNavComponent from './mainMenuScreen/testing/testnav';
+import PageComponent from './mainMenuScreen/testing/page';
 
 
+var NavigatorBarRouteMapper = {
+  LeftButton: function(route, navigator, index){
+    if(route.name == 'TestNavComponent'){
+      return null
+    }
+
+    return(
+        <TouchableHighlight onPress={() => {
+          if(index > 0){
+            navigator.pop();
+          }
+        }}>
+            <Text style={{marginTop:10, marginLeft:20, color:'#007AFF'}}>Back</Text>
+        </TouchableHighlight>
+      )
+  },
+
+  RightButton: function(route, navigator, index){
+    return null;
+  },
+
+  Title: function(route, navigator, index){
+    if(route.name == 'TestNavComponent'){
+      return null
+    }
+    
+    return(
+        <Text style={{marginTop:10, color: '#007AFF'}}>
+          {route.name}
+        </Text>
+      )
+  }
+
+};
 
 class App extends Component {
 
   renderScene(route, navigator){
-
-    if(route.name == 'main'){
-      return <MainMenuScreen navigator={navigator} />
-    }
-
-    if(route.name == 'firstItem'){
-      return <FirstItem navigator={navigator} />
-    }
-
-    if(route.name == 'secondItem'){
-      return <SecondItem navigator={navigator} />
-    }
-
-    if(route.name == 'thirdItem'){
-      return <ThirdItem navigator={navigator} />
-    }
-
-    if(route.name == 'fourthItem'){
-      return <FourthItem navigator={navigator} />
-    }
-
-    if(route.name == 'fifthItem'){
-      return <FifthItem navigator={navigator} />
-    }
-
-
-
-   
+      switch(route.name){
+          case 'TestNavComponent':
+            return(
+                <TestNavComponent navigator={navigator} route={route} />
+              );
+          case 'PageComponent':
+            return(
+                <PageComponent navigator={navigator} route={route} />
+              );
+      }
   }
 
   render() {
     return (
       <SplashScreen duration={3000}>
-          <Navigator
-            initialRoute={{name: 'main'}}
-            renderScene={this.renderScene.bind(this)}
+          <Navigator style={{backgroundColor:'#fff'}}
+          initialRoute={{name: 'TestNavComponent'}} 
+          renderScene={this.renderScene}
+          configureScene={(route) => {
+            if(route.sceneConfig){
+              return route.sceneConfig;
+            }
+            return Navigator.SceneConfigs.FloatFromRight
+          }} 
+          navigationBar={
+            <Navigator.NavigationBar
+              routeMapper={NavigatorBarRouteMapper} />
+          } 
+
           />
       </SplashScreen>
-    );
+    )
   }
 
 }
@@ -60,23 +91,7 @@ class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-  
-
 });
 
 export default App;

@@ -3,7 +3,16 @@ import { Container, Content, List, ListItem, Thumbnail, Text, Header, Button, Ti
 import { StyleSheet, Image, View } from 'react-native';
 import { Col, Row, Grid } from "react-native-easy-grid";
 
+import Back from '.././mainMenuScreen';
+
 class FirstItem extends Component {
+
+    renderScene(route, navigator){
+
+    if(route.name == 'back'){
+      return <Back navigator={navigator} />
+    }
+}
 
   render() {
     return (
@@ -13,7 +22,7 @@ class FirstItem extends Component {
             <Header style={styles.headernavbar}>  
 
             <Button transparent>
-                   <Image style={styles.backIcon} source={require('./../../../assets/icon_back.png')} />
+                   <Image style={styles.backIcon} source={require('./../../../assets/icon_back.png')} onPress={this.navigate.bind(this,'back')} />
             </Button>
 
                 <Title>กลุ่มดาวแกะ</Title>
@@ -43,10 +52,10 @@ const styles = StyleSheet.create({
         height:null,
     },
     welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-    color:'white',
+        fontSize: 20,
+        textAlign: 'center',
+        margin: 10,
+        color:'white',
     },
     headernavbar: {
         backgroundColor:'#090123',
