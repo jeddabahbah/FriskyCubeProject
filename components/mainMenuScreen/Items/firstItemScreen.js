@@ -3,29 +3,18 @@ import { Container, Content, List, ListItem, Thumbnail, Text, Header, Button, Ti
 import { StyleSheet, Image, View } from 'react-native';
 import { Col, Row, Grid } from "react-native-easy-grid";
 
-import Back from '.././mainMenuScreen';
 
 class FirstItem extends Component {
 
-    renderScene(route, navigator){
-
-    if(route.name == 'back'){
-      return <Back navigator={navigator} />
-    }
-}
-
   render() {
     return (
-        <Image source={require('./../../../assets/bg_star.png')} style={styles.container}>
+
+       <Image source={require('./../../../assets/bg_star.png')} style={styles.container}>
 
         <Container>
             <Header style={styles.headernavbar}>  
 
-            <Button transparent>
-                   <Image style={styles.backIcon} source={require('./../../../assets/icon_back.png')} onPress={this.navigate.bind(this,'back')} />
-            </Button>
-
-                <Title>กลุ่มดาวแกะ</Title>
+        
             </Header>
 
                  <Content>
@@ -45,7 +34,7 @@ class FirstItem extends Component {
 }
 
 const styles = StyleSheet.create({
-     container: {   
+    container: {   
         flex: 10,
         justifyContent: 'center',
         width:null,
@@ -64,6 +53,8 @@ const styles = StyleSheet.create({
         width:30,
         height:30,
     },
+
+
 
 
 });
