@@ -13,6 +13,38 @@ class MainMenuScreen extends Component {
         });
     }
 
+    onClickTwo(){
+        this.props.navigator.push({
+            title:'กลุ่มดาววัว',
+            name: 'SecondItem',
+            passProps:{}
+        });
+    }
+
+    onClickThree(){
+        this.props.navigator.push({
+            title:'กลุ่มดาวปู',
+            name: 'ThirdItem',
+            passProps:{}
+        });
+    }
+
+    onClickFour(){
+        this.props.navigator.push({
+            title:'กลุ่มดาวสิงโต',
+            name: 'FourthItem',
+            passProps:{}
+        });
+    }
+
+    onClickFive(){
+        this.props.navigator.push({
+            title:'กลุ่มดาวแพะ',
+            name: 'FifthItem',
+            passProps:{}
+        });
+    }
+
   render() {
     return (
 
@@ -42,6 +74,63 @@ class MainMenuScreen extends Component {
                                      <View>
                                           <TouchableHighlight onPress={(this.onClickOne.bind(this))}>
                                             <Image style={styles.picStar} source={require('./../../assets/star_aries.png')} />
+                                          </TouchableHighlight> 
+                                     </View>
+                                </Col>
+                        </Row>
+
+                        <Row style={styles.item}>
+                                <Col>
+                                     <View style={styles.detailStar} onPress={(this.onClickTwo.bind(this))}>
+                                        <Text 
+                                              style={{color:'white'}}> กลุ่มดาววัว </Text>
+                                     </View> 
+                                     <View>
+                                          <TouchableHighlight onPress={(this.onClickTwo.bind(this))}>
+                                            <Image style={styles.picStar} source={require('./../../assets/star_taurush.png')} />
+                                          </TouchableHighlight> 
+                                     </View>
+                                </Col>
+                        </Row>
+
+                        <Row style={styles.item}>
+                                <Col>
+                                     <View style={styles.detailStar} onPress={(this.onClickThree.bind(this))}>
+                                        <Text 
+                                              style={{color:'white'}}> กลุ่มดาวปู </Text>
+                                     </View> 
+                                     <View>
+                                          <TouchableHighlight onPress={(this.onClickThree.bind(this))}>
+                                            <Image style={styles.picStar} source={require('./../../assets/star_cancer.png')} />
+                                          </TouchableHighlight> 
+                                     </View>
+                                </Col>
+                        </Row>
+
+                        <Row style={styles.item}>
+                                <Col>
+                                     <View style={styles.detailStar} onPress={(this.onClickFour.bind(this))}>
+                                        <Text 
+                                              style={{color:'white'}}> กลุ่มดาวสิงโต </Text>
+                                     </View> 
+                                     <View>
+                                          <TouchableHighlight onPress={(this.onClickFour.bind(this))}>
+                                            <Image style={styles.picStar} source={require('./../../assets/star_leo.png')} />
+                                          </TouchableHighlight> 
+                                     </View>
+                                </Col>
+                        </Row>
+
+
+                        <Row style={styles.item}>
+                                <Col>
+                                     <View style={styles.detailStar} onPress={(this.onClickFive.bind(this))}>
+                                        <Text 
+                                              style={{color:'white'}}> กลุ่มดาวแพะ </Text>
+                                     </View> 
+                                     <View>
+                                          <TouchableHighlight onPress={(this.onClickFive.bind(this))}>
+                                            <Image style={styles.picStar} source={require('./../../assets/star_capricorn.png')} />
                                           </TouchableHighlight> 
                                      </View>
                                 </Col>

@@ -11,12 +11,6 @@ class FifthItem extends Component {
 
         <Container>
             <Header style={styles.headernavbar}>  
-
-            <Button transparent>
-                   <Image style={styles.backIcon} source={require('./../../../assets/icon_back.png')} />
-            </Button>
-
-                <Title>กลุ่มดาวแพะ</Title>
             </Header>
 
                  <Content>

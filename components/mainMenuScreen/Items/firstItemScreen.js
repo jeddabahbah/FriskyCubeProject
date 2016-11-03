@@ -13,8 +13,6 @@ class FirstItem extends Component {
 
         <Container>
             <Header style={styles.headernavbar}>  
-
-        
             </Header>
 
                  <Content>

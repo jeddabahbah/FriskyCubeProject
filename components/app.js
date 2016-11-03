@@ -6,10 +6,10 @@ import { StyleSheet, Text, View, Navigator, TouchableHighlight, Image } from 're
 import SplashScreen from './splashScreen/splashScreen';
 import MainMenu from './mainMenuScreen/mainMenuScreen';
 import FirstItem from './mainMenuScreen/Items/firstItemScreen';
-//import SecondItem from './mainMenuScreen/Items/secondItemScreen';
-//import ThirdItem from './mainMenuScreen/Items/thirdItemScreen';
-//import FourthItem from './mainMenuScreen/Items/fourthItemScreen';
-//import FifthItem from './mainMenuScreen/Items/fifthItemScreen';
+import SecondItem from './mainMenuScreen/Items/secondItemScreen';
+import ThirdItem from './mainMenuScreen/Items/thirdItemScreen';
+import FourthItem from './mainMenuScreen/Items/fourthItemScreen';
+import FifthItem from './mainMenuScreen/Items/fifthItemScreen';
 //import TestNavComponent from './mainMenuScreen/testing/testnav';
 //import PageComponent from './mainMenuScreen/testing/page';
 //import PageTwoComponent from './mainMenuScreen/testing/pagetwo';
@@ -62,6 +62,23 @@ class App extends Component {
             return(
                 <FirstItem navigator={navigator} route={route} />
               );
+          case 'SecondItem':
+            return(
+                <SecondItem navigator={navigator} route={route} />
+              );
+          case 'ThirdItem':
+            return(
+                <ThirdItem navigator={navigator} route={route} />
+              );
+          case 'FourthItem':
+            return(
+                <FourthItem navigator={navigator} route={route} />
+              );
+         case 'FifthItem':
+            return(
+                <FifthItem navigator={navigator} route={route} />
+              );
+         
          
       }
   }
