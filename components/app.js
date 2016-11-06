@@ -10,6 +10,7 @@ import SecondItem from './mainMenuScreen/Items/secondItemScreen';
 import ThirdItem from './mainMenuScreen/Items/thirdItemScreen';
 import FourthItem from './mainMenuScreen/Items/fourthItemScreen';
 import FifthItem from './mainMenuScreen/Items/fifthItemScreen';
+import Howto from './mainMenuScreen/Items/HowtoScreen';
 //import TestNavComponent from './mainMenuScreen/testing/testnav';
 //import PageComponent from './mainMenuScreen/testing/page';
 //import PageTwoComponent from './mainMenuScreen/testing/pagetwo';
@@ -74,9 +75,13 @@ class App extends Component {
             return(
                 <FourthItem navigator={navigator} route={route} />
               );
-         case 'FifthItem':
+          case 'FifthItem':
             return(
                 <FifthItem navigator={navigator} route={route} />
+              );
+          case 'Howto':
+            return(
+                <Howto navigator={navigator} route={route} />
               );
          
          

@@ -45,6 +45,14 @@ class MainMenuScreen extends Component {
         });
     }
 
+    onClickhowto(){
+        this.props.navigator.push({
+            title:'HowtoPlayCube',
+            name: 'Howto',
+            passProps:{}
+        });
+    }
+
   render() {
     return (
 
@@ -53,8 +61,10 @@ class MainMenuScreen extends Component {
         <Image source={require('./../../assets/bg_star.png')} style={styles.container}>
            <Container>
             <Header style={styles.headernavbar}>  
-                <Button transparent>
-                <Thumbnail style={styles.buttonIcon} size={30} source={require('./../../assets/icon_howto.png')} />
+                <Button transparent onPress={(this.onClickOne.bind(this))}>
+                <TouchableHighlight onPress={(this.onClickOne.bind(this))}>
+                    <Image style={{width:30,height:30}} source={require('./../../assets/icon_howto.png')} />
+                </TouchableHighlight>
                 </Button>
                     <Title>กลุ่มดาว</Title>
 
